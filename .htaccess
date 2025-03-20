@@ -1,0 +1,38 @@
+# Aktifkan mod_rewrite
+RewriteEngine On
+
+# Redirect semua traffic ke HTTPS (jika SSL tersedia)
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# Setel halaman utama menjadi home.html
+DirectoryIndex home.html
+
+# Hilangkan .html dari URL
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^/.]+)$ $1.html [L]
+
+# Redirect URL dengan .html ke versi tanpa .html (SEO Friendly)
+RewriteCond %{THE_REQUEST} \s/([^.]+)\.html\s [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# Error Handling (Custom Pages)
+ErrorDocument 400 /400.html
+ErrorDocument 401 /401.html
+ErrorDocument 403 /403.html
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
+ErrorDocument 502 /502.html
+ErrorDocument 503 /503.html
+
+# Caching untuk meningkatkan kecepatan
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType text/javascript "access plus 1 week"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 week"
+    ExpiresByType application/x-javascript "access plus 1 week"

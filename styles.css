@@ -1,0 +1,233 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Montserrat:wght@400;600&family=Inter:wght@300;400;600&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+    color: white;
+    padding: 5vw; /* Golden Ratio for Responsiveness */
+    margin: 0;
+}
+
+/* Container */
+.container {
+    max-width: 618px; /* Golden Ratio */
+    margin: auto;
+    background: rgba(255, 255, 255, 0.10);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Profile Image */
+.profile-img {
+    width: 148px; /* Golden Ratio */
+    height: 148px;
+    border-radius: 50%;
+    border: 3px solid #ffd700;
+    margin-bottom: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+/* Titles */
+.title {
+    font-size: 34px; /* Golden Ratio */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #ffd700;
+}
+
+.subtitle {
+    font-size: 16px; /* Golden Ratio */
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+/* About Me */
+.about {
+    text-align: left;
+}
+
+.about h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffd700;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+}
+
+.about p {
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+/* Stats Section */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* Auto Responsive Grid */
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.stat-item {
+    padding: 18px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.stat-item p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffd700;
+}
+
+/* Links Section */
+.links h2 {
+    font-size: 20px;
+    color: #ffd700;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+}
+
+.links .btn {
+    display: block;
+    padding: 12px;
+    margin: 8px 0;
+    font-size: 16px;
+    background: #ffd700;
+    color: #222;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 10px;
+    transition: background 0.2s ease-in-out;
+}
+
+.links .btn:hover {
+    background: #e6c200;
+}
+
+/* Contact Section */
+.contact h2 {
+    font-size: 20px;
+    color: #ffd700;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+}
+
+.contact a {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 18px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background 0.2s ease-in-out;
+}
+
+.contact a:hover {
+    background: #ffd700;
+    color: #222;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #ddd;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.08); /* Transparan dengan efek glass */
+    border-radius: 12px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.footer-link {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease-in-out;
+}
+
+.footer-link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        padding: 25px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat-item {
+        padding: 16px;
+    }
+
+    .links .btn {
+        font-size: 14px;
+    }
+
+    .contact a {
+        display: block;
+        margin: 8px auto;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .links .btn, .contact a {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
