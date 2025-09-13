@@ -70,6 +70,8 @@ body {
     font-size: 15px;
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
+    text-align: justify;
+    text-align-last: left; /* Hanya meratakan baris terakhir */
 }
 
 /* Stats Section */
@@ -165,6 +167,7 @@ footer {
 
 footer p {
     margin: 5px 0;
+    font-family: Poppins;
 }
 
 .footer-links {

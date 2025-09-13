@@ -33,12 +33,8 @@
         <!-- About Me -->
         <section class="about">
             <h2>About Me</h2>
-            <p>
-                Halo! Saya <b>Ach. Miftakhul Huda</b>, seorang <strong>Web Developer</strong> dan <strong>Pelajar</strong> dengan pengalaman membangun website yang modern, responsif, dan interaktif.  
-                Saya sangat antusias dengan dunia teknologi, pengembangan web, dan desain yang menarik.  
-                Saat ini, saya aktif mengerjakan berbagai <strong>project, course, dan terkadang sedikit berbagi ilmu di sosial media</strong> 🚀
-            </p>
-        </section>
+            <p id="typing-text"></p>
+        </section>        
 
         <!-- Statistik -->
         <section class="stats">
@@ -56,42 +52,91 @@
             </div>
         </section>
 
-        <!-- Sosial Media -->
+       <!-- Sosial Media -->
         <section class="links">
             <h2><i class="fas fa-link"></i> Connect With Me</h2>
-            <a href="https://www.instagram.com/m.hda1" target="_blank" class="btn"><i class="fab fa-instagram"></i> Instagram</a>
-            <a href="https://www.linkedin.com/in/amhda" target="_blank" class="btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="https://www.youtube.com/@mhteams" target="_blank" class="btn"><i class="fab fa-youtube"></i> YouTube</a>
-            <a href="https://amhportofolio.rf.gd" target="_blank" class="btn"><i class="fas fa-briefcase"></i> Portofolio</a>
-            <a href="https://mhteams.rf.gd" target="_blank" class="btn">
-                <i class="fas fa-users"></i> MHTeams
-             </a>
-             <a href="https://mhsnapframe.rf.gd" target="_blank" class="btn">
-                <i class="fas fa-camera-retro"></i> MHSnapFrame
-             </a>
-             <a href="https://hudatechna.rf.gd" target="_blank" class="btn">
-                <i class="fas fa-newspaper"></i> Blog
-             </a>             
+            <p class="cta-text">Jangan ragu untuk terhubung! 🚀  
+                Klik salah satu platform di bawah dan let's collaborate! ✨  
+            </p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/m.hda1" target="_blank" class="btn">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="https://www.linkedin.com/in/amhda" target="_blank" class="btn">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://www.youtube.com/@mhteams" target="_blank" class="btn">
+                    <i class="fab fa-youtube"></i> YouTube
+                </a>
+                <a href="https://amhportofolio.rf.gd" target="_blank" class="btn">
+                    <i class="fas fa-briefcase"></i> Portfolio
+                </a>
+                <a href="https://mhteams.rf.gd" target="_blank" class="btn">
+                    <i class="fas fa-users"></i> MHTeams
+                </a>
+                <a href="https://mhsnapframe.rf.gd" target="_blank" class="btn">
+                    <i class="fas fa-camera-retro"></i> MHSnapFrame
+                </a>
+                <a href="https://hudatechna.rf.gd" target="_blank" class="btn">
+                    <i class="fas fa-newspaper"></i> Blog
+                </a>
+            </div>
         </section>
 
         <!-- Kontak -->
         <section class="contact">
             <h2><i class="fas fa-envelope"></i> Get in Touch</h2>
-            <a href="mailto:achmiftakhulhuda093@gmail.com" class="btn contact-btn"><i class="fas fa-envelope"></i> Email Saya</a>
-            <a href="https://wa.me/6285730785572" target="_blank" class="btn contact-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <p class="cta-text">Punya pertanyaan atau mau berkolaborasi? Jangan ragu, ayo ngobrol! 🎯</p>
+            <div class="contact-links">
+                <a href="mailto:achmiftakhulhuda093@gmail.com" class="btn contact-btn">
+                    <i class="fas fa-envelope"></i> Email Saya
+                </a>
+                <a href="https://wa.me/6285730785572" target="_blank" class="btn contact-btn">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
         </section>
+
     </div>
 
     <!-- Footer -->
     <footer>
-        <p><i class="fas fa-code"></i> Made <i class="fas fa-heart"></i> with by <b>MHTeams</b></p>
-        <p>
-            <a href="https://wa.me/6285183241229" target="_blank" class="footer-link"><i class="fab fa-whatsapp"></i> Order via WhatsApp</a> | 
-            <a href="mailto:contactmhteams@gmail.com" class="footer-link"><i class="fas fa-envelope"></i> Order via Email</a>
-        </p>
-    </footer>
+        <p><i class="fas fa-code"></i> Made with <i class="fas fa-heart"></i> by <b>MHTeams</b></p>
+        <p class="cta-footer">Butuh jasa website keren?</p>
+        <div class="footer-links">
+            <a href="https://wa.me/6285183241229" target="_blank" class="footer-link btn-footer">
+                <i class="fab fa-whatsapp"></i> Order via WhatsApp
+            </a>
+            <a href="mailto:contactmhteams@gmail.com" class="footer-link btn-footer">
+                <i class="fas fa-envelope"></i> Order via Email
+            </a>
+        </div>
+    </footer>    
 
     <!-- Script -->
     <script src="script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const text = "Halo! Saya Ach. Miftakhul Huda, seorang Web Developer dan Pelajar dengan pengalaman dalam membangun situs web yang modern, responsif, dan interaktif. Saya sangat antusias dengan dunia teknologi, pengembangan web, serta desain digital yang menarik. Saat ini, saya sedang mengerjakan berbagai proyek, mengikuti berbagai course, dan juga aktif berbagi pengalaman atau ilmu saya di media sosial 🚀. Saya percaya bahwa teknologi memiliki kekuatan untuk mengubah dunia, dan saya berkomitmen untuk berkontribusi dalam menghadirkan solusi berbasis web yang inovatif dan berdampak positif.";
+            
+            let index = 0;
+            const speed = 50; // Kecepatan mengetik (ms)
+            const typingElement = document.getElementById("typing-text");
+        
+            function typeWriter() {
+                if (index < text.length) {
+                    typingElement.innerHTML += text.charAt(index);
+                    index++;
+                    setTimeout(typeWriter, speed);
+                } else {
+                    typingElement.style.borderRight = "none"; // Hilangkan kursor setelah selesai mengetik
+                }
+            }
+        
+            typeWriter();
+        });
+        </script>
+        
 </body>
 </html>
